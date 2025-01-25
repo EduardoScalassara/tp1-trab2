@@ -8,13 +8,33 @@ class Dominio {
     virtual bool validar(T) = 0;  
   public:
     bool setValor(T);
-    T getValor() const;
+    T getValor() const {
+        return valor;
+    }
 };
 
-inline T Dominio<T>::getValor() const {
-  return valor;
-}
+template <typename T> 
+class DominioA1:public Dominio<T> {
+    private:
+        bool validar(T);
+};
+
+template <typename T> 
+class DominioB1:public Dominio<T> {
+    private:
+        bool validar(T);
+};
+
+template <typename T> 
+class DominioA2:public Dominio<T> {
+    private:
+        bool validar(T);
+};
+
+template <typename T> 
+class DominioB2:public Dominio<T> {
+   private:
+        bool validar(T);
+};
 
 #endif // DOMINIOS_HPP_INCLUDED
-    
-    

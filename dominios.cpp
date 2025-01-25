@@ -1,4 +1,4 @@
-#inlude "dominios.hpp"
+#include "dominios.hpp"
 
 bool Dominio<T>::setValor(T) {
   if (!validar(valor))
